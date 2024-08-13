@@ -12,7 +12,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const useDarkMode = () => {
   const themeContext = useContext(ThemeContext);
   if (!themeContext) {
-    throw new Error("useTheme must be used in theme provider");
+    throw new Error("useDarkMode must be used in theme provider");
   }
   return themeContext;
 };
@@ -23,13 +23,6 @@ export const DarkModeThemeProvider: React.FC<childrenType> = ({ children }) => {
 
   useEffect(() => {
     const persistTheme = window.localStorage.getItem("darkMode");
-    persistTheme &&
-      console.log(
-        "persistTheme",
-        persistTheme,
-        "parse",
-        JSON.parse(persistTheme)
-      );
     persistTheme && setDarkMode(JSON.parse(persistTheme));
   }, []);
 

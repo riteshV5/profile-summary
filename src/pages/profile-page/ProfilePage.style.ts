@@ -1,13 +1,17 @@
 import { styled, Grid } from "@mui/material";
 
-export const GridContaninerStyled = styled(Grid)(({ theme }) => ({
+export const GridContaninerStyled = styled(Grid)<{
+  darkMode?: boolean | undefined;
+}>(({ darkMode, theme }) => ({
   border: 1,
-  height: "100vh",
   [theme.breakpoints.down(480)]: {
     maxWidth: "480px",
     minWidth: "320px",
   },
   marginTop: 5,
+  root: {
+    background: darkMode ? "#161b22" : "#ffffff",
+  },
 }));
 export const StyledGridProfile = styled(Grid)<{
   darkmode: boolean | undefined;

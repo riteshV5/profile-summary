@@ -1,8 +1,8 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import { StyledGridProfile } from "./ProfilePage.style";
-import { PROFILE_SUMMARY } from "../constants/profilePage.constants";
-import { useDarkMode } from "../hooks/DarkModeThemeProvider";
+import { PROFILE_SUMMARY } from "../../constants/profilePage.constants";
+import { useDarkMode } from "../../hooks/DarkModeThemeProvider";
 
 const ProfilePage: React.FC = () => {
   const { darkMode } = useDarkMode();

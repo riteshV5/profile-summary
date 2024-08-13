@@ -8,8 +8,8 @@ import { DarkModeThemeProvider } from "././hooks/DarkModeThemeProvider.tsx";
 const customTheme = createTheme({
   palette: {
     primary: {
-      main: "#ffffff",
-      contrastText: "white",
+      main: "#000000",
+      contrastText: "#000000",
     },
   },
 });
